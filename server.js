@@ -3,10 +3,10 @@ var request = require('request');
 var app = express();
 
 // You can pass the API server address as a parameter you configure statically
-var apiUrl = process.argv[2] || 'http://fenix.greenmile.com';
+var apiUrl = process.argv[2] || 'http://api.server.com';
 
 // Where your static files are
-var frontEndFiles = '/Users/mozartdiniz/Documents/Greenmile/gm-live/src';
+var frontEndFiles = '/Users/yourUser/Documents/Projects/myFrontEndFiles';
 
 app.use(express.static('files'));
 
