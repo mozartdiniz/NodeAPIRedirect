@@ -1,0 +1,16 @@
+{
+  "name": "NodeAPIRedirect",
+  "version": "0.0.1",
+  "description": "A lightweight server and request proxy for static front-end projects",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mozartdiniz/NodeAPIRedirect.git"
+  },
+  "author": "Mozart Diniz <mozart.diniz@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/mozartdiniz/NodeAPIRedirect.git",
+  "dependencies": {
+    "express": "^4.13.3",
+    "request": "^2.61.0"
+  }
+}
