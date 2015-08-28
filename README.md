@@ -22,3 +22,15 @@ app.use('/resources/javascripts/', express.static(frontEndFiles + '/resources/ja
 ```
 
 For something that make sense for your project.
+
+Now you can just run
+
+```
+node server.js http://myanotherapi.server.com
+```
+
+Now, just open your front-end project in your favorite browser.
+
+http://localhost:3000/index
+
+Remember, you will not open your index.html file, it is our mapping
