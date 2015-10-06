@@ -3,10 +3,10 @@ var request = require('request');
 var app = express();
 
 // You can pass the API server address as a parameter you configure statically
-var apiUrl = process.argv[2] || 'http://api.server.com';
+var apiUrl = process.argv[2] || 'http://survey.greenmile.com';
 
 // Where your static files are
-var frontEndFiles = '/Users/yourUser/Documents/Projects/myFrontEndFiles';
+var frontEndFiles = '/Users/mozartdiniz/Documents/Greenmile/gm-live/src';
 
 app.use(express.static('files'));
 
@@ -18,6 +18,7 @@ app.use('/index', express.static(frontEndFiles + '/index.html'));
 app.use('/resources/javascripts/', express.static(frontEndFiles + '/resources/javascripts'));
 app.use('/resources/stylesheets/', express.static(frontEndFiles + '/resources/stylesheets'));
 app.use('/resources/images/', express.static(frontEndFiles + '/resources/images'));
+app.use('/resources/html_templates/', express.static(frontEndFiles + '/resources/html_templates'));
 
 // Here is the secret, all your api call will be dynamically mapped to a remote
 // server with the same kind of request e same parameters and same content body
