@@ -2,8 +2,11 @@ var express = require('express');
 var request = require('request');
 var app = express();
 
+var server = process.env.SERVER || 'http://survey.greenmile.com';
+var port = process.env.PORT || 3000;
+
 // You can pass the API server address as a parameter you configure statically
-var apiUrl = process.argv[2] || 'http://survey.greenmile.com';
+var apiUrl = server;
 
 // Where your static files are
 var frontEndFiles = '/Users/mozartdiniz/Documents/Greenmile/gm-live/src';
@@ -28,8 +31,9 @@ app.use('/', function(req, res) {
 });
 
 // Starting the server
-app.listen(3000);
-
-console.log ('Server target: ' + apiUrl);
-console.log ('Front-end folder: ' + frontEndFiles);
-console.log ('API server running since ' + new Date());
+app.listen(port, function() {
+  console.log('Server running at: ' + port);
+  console.log ('Server target: ' + apiUrl);
+  console.log ('Front-end folder: ' + frontEndFiles);
+  console.log ('API server running since ' + new Date());
+});
